@@ -119,7 +119,7 @@ const loadRepository = async (url) => {
     display(spinner, "none");
     repos?.forEach((repo, i) => {
       const repoCard = document.createElement("div");
-      repoCard.classList.add("col-md-6");
+      repoCard.className="col-md-6 col-sm-12"
       repoCard.innerHTML = `
         <div class="card shadow rounded-8 animate__animated ${
           i % 2 == 0 ? "animate__fadeInLeft" : "animate__fadeInRight"
@@ -152,7 +152,7 @@ const loadFollower = async (url) => {
     const followers = await res.json();
     followers?.forEach((follower, i) => {
       const userCard = document.createElement("div");
-      userCard.classList.add("col-md-6");
+      userCard.className="col-md-6 col-sm-12"
       userCard.innerHTML = `
       <div class="card shadow rounded-8 animate__animated ${
         i % 2 == 0 ? "animate__fadeInLeft" : "animate__fadeInRight"
